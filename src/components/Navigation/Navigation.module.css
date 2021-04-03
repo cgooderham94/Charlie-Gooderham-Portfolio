@@ -4,10 +4,12 @@
     flex-wrap: wrap;
 }
 
+/* TODO: Make 'flyout' nav on mobile */
 .Navbar {
     justify-content: space-between;
     max-width: var(--container-size);
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .Navbar ul {
