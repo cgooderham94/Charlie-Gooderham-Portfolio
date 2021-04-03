@@ -13,9 +13,9 @@ import classes from './App.module.css';
 function App() {
   return (
     <BrowserRouter>
+      <Navigation></Navigation>
+
       <main className={classes.App}>
-        <Navigation></Navigation>
-        
         <Switch>
           <Route exact path="/">
             <Landing />
@@ -29,7 +29,6 @@ function App() {
             <GetInTouch/>
           </Route>
         </Switch>
-
       </main>
     </BrowserRouter>
   );
