@@ -6,8 +6,24 @@
     text-decoration: none;
 }
 
+.Logo:hover span:first-child,
+.Logo:focus span:first-child {
+    transform: translateX(-2px);
+}
+
+.Logo:hover span:last-child,
+.Logo:focus span:last-child {
+    transform: translateX(2px);
+}
+
+.Logo span {
+    display: inline-block;
+    transition: 0.2s ease-in-out;
+}
+
 .Logo span:first-child {
     content: '<';
+
 }
 
 .Logo span:last-child {
