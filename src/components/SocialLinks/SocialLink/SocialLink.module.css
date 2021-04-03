@@ -1,0 +1,21 @@
+.SocialLink {
+    display: flex;
+    align-items: center;
+}
+
+.SocialLink:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.SocialLink img {
+    width: 48px;
+    height: auto;
+}
+
+.TextSr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
