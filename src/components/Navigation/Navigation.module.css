@@ -1,0 +1,15 @@
+.Navbar,
+.Navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Navbar {
+    justify-content: space-between;
+    max-width: var(--container-size);
+    margin: 0 auto;
+}
+
+.Navbar ul {
+    justify-content: flex-end;
+}

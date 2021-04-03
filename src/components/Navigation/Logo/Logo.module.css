@@ -1,0 +1,19 @@
+.Logo {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.Logo span:first-child {
+    content: '<';
+}
+
+.Logo span:last-child {
+    content: '>';
+}
+
+.LogoInitials {
+    display: inline-block;
+    padding: 0 0.125rem;
+    font-weight: 600;
+}
