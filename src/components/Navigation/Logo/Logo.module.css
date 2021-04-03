@@ -1,6 +1,7 @@
 .Logo {
     display: block;
     padding: 1rem;
+    color: var(--color-black);
     text-decoration: none;
 }
 

@@ -1,10 +1,15 @@
 .Headline {
-    max-width: 75%;
-    min-width: 300px;
+    width: 100%;
 }
 
 .Headline span {
     display: block;
     margin-bottom: 0.75rem;
     letter-spacing: 0.75px;
+}
+
+@media screen and (min-width: 450px) {
+    .Headline {
+        max-width: 75%;
+    }
 }
