@@ -1,0 +1,10 @@
+.Headline {
+    max-width: 75%;
+    min-width: 300px;
+}
+
+.Headline span {
+    display: block;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.75px;
+}
