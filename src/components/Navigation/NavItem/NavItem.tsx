@@ -1,12 +1,17 @@
-import { NavLink } from 'react-router-dom';
+import { FunctionComponent } from 'react';
+import { NavLink, NavLinkProps } from 'react-router-dom';
 
 import classes from './NavItem.module.css';
 
-const NavItem = (props) => {
+interface NavItem {
+    linkParams: NavLinkProps
+}
+
+const NavItem: FunctionComponent<NavItem> = ({linkParams, children}) => {
     return (
         <li className={classes.NavItem}>
-            <NavLink to="/" {...props.linkParams}>
-                { props.children }
+            <NavLink {...linkParams}>
+                { children }
             </NavLink>
         </li>
     );

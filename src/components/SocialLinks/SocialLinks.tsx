@@ -1,23 +1,8 @@
 import SocialLink from './SocialLink/SocialLink';
-
-import github from './github.svg';
-import linkedin from './linkedin.svg';
 import classes from "./SocialLinks.module.css"
+import { socialPlatforms } from "./constants";
 
 const SocialLinks = () => {
-    let socialPlatforms = [
-        {
-            name: 'Github',
-            icon: github,
-            url: 'https://github.com/cgooderham94'
-        },
-        {
-            name: 'LinkedIn',
-            icon: linkedin,
-            url: 'https://www.linkedin.com/in/charles-gooderham/'
-        }
-    ]
-
     return (
         <div className={classes.SocialLinks}>
             {

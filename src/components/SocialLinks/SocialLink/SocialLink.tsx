@@ -1,10 +1,18 @@
+import { FunctionComponent } from "react";
 import classes from "./SocialLink.module.css";
+import { SocialPlatformName } from "../types";
 
-const SocialLink = (props) => {
+interface SocialLink {
+    url: string;
+    icon: string;
+    platformName: SocialPlatformName;
+}
+
+const SocialLink: FunctionComponent<SocialLink> = ({url, icon, platformName}) => {
     return (
-        <a href={props.url} className={classes.SocialLink} target="_blank" rel="noopener">
-            <img src={props.icon} alt={props.platformName + ' Logo'} width="48" height="48" />
-            <span className={classes.TextSr}>{ props.platformName }</span>
+        <a href={url} className={classes.SocialLink} target="_blank" rel="noopener">
+            <img src={icon} alt={platformName + ' Logo'} width="48" height="48" />
+            <span className={classes.TextSr}>{ platformName }</span>
         </a>
     );
 }
