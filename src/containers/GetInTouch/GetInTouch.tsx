@@ -1,8 +1,5 @@
 const GetInTouch = () => {
-    return (
-        <div>
-        </div>
-    );
-}
+  return <div></div>;
+};
 
 export default GetInTouch;
