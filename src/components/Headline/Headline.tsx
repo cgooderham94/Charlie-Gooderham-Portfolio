@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import classes from "./Headline.module.css";
+import { headline, headlineSpan } from "./Headline.css";
 
 interface HeadlineProps {
   text: string[];
@@ -7,9 +7,11 @@ interface HeadlineProps {
 
 export const Headline: FunctionComponent<HeadlineProps> = ({ text }) => {
   return (
-    <h1 className={classes.Headline}>
+    <h1 className={headline}>
       {text.map((string, index) => (
-        <span key={index}>{string}</span>
+        <span key={index} className={headlineSpan}>
+          {string}
+        </span>
       ))}
     </h1>
   );
