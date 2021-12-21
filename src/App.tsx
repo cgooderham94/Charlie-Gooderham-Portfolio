@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { appStyle } from "./index.css";
 import { darkTheme, lightTheme } from "./theme/themes.css";
@@ -8,16 +8,22 @@ import Portfolio from "./containers/Portfolio/Portfolio";
 import GetInTouch from "./containers/GetInTouch/GetInTouch";
 import classes from "./App.module.css";
 import { useIsDarkMode } from "./hooks/useIsDarkMode";
+import { joinClasses } from "./utils/strings";
 
 export const App: FunctionComponent = () => {
   const { isDarkMode: isDarkMode, setIsDarkMode: setIsDarkMode } =
     useIsDarkMode();
+  const [hasSetMode, setHasSetMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setHasSetMode(true);
+    setIsDarkMode(!isDarkMode);
+  };
+
+  const themeClass = hasSetMode && (isDarkMode ? darkTheme : lightTheme);
 
   return (
-    <div
-      id="app"
-      className={[appStyle, isDarkMode ? darkTheme : lightTheme].join(" ")}
-    >
+    <div id="app" className={joinClasses([appStyle, themeClass])}>
       <BrowserRouter>
         <Navigation></Navigation>
 
@@ -36,9 +42,7 @@ export const App: FunctionComponent = () => {
             </Route>
           </Switch>
 
-          <button onClick={() => setIsDarkMode(!isDarkMode)}>
-            Toggle Dark Mode
-          </button>
+          <button onClick={() => toggleDarkMode()}>Toggle Dark Mode</button>
         </main>
       </BrowserRouter>
     </div>
