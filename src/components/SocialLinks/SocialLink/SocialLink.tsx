@@ -1,10 +1,13 @@
 import { FunctionComponent } from "react";
 import classes from "./SocialLink.module.css";
 import { SocialPlatformName } from "../types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { themeVars } from "../../../theme/index.css";
 
 interface SocialLinkProps {
   url: string;
-  icon: string;
+  icon: IconDefinition;
   platformName: SocialPlatformName;
 }
 
@@ -20,7 +23,11 @@ const SocialLink: FunctionComponent<SocialLinkProps> = ({
       target="_blank"
       rel="noreferrer"
     >
-      <img src={icon} alt={platformName + " Logo"} width="48" height="48" />
+      <FontAwesomeIcon
+        icon={icon}
+        size="3x"
+        color={themeVars.colors.text.secondary}
+      />
       <span className={classes.TextSr}>{platformName}</span>
     </a>
   );

@@ -1,16 +1,15 @@
 import { SocialPlatformName, SocialPlatforms } from "./types";
-import github from "./github.svg";
-import linkedin from "./linkedin.svg";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export const socialPlatforms: SocialPlatforms = [
   {
     name: SocialPlatformName.github,
-    icon: github,
+    icon: faGithub,
     url: "https://github.com/cgooderham94",
   },
   {
     name: SocialPlatformName.linkedin,
-    icon: linkedin,
+    icon: faLinkedin,
     url: "https://www.linkedin.com/in/charles-gooderham/",
   },
 ];

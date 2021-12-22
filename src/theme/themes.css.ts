@@ -23,7 +23,7 @@ export const lightTheme = createTheme(colors, {
   },
   primary: "#ff79c6",
   secondary: "#bd93f9",
-  success: "##50fa7b",
+  success: "#50fa7b",
   info: "#8be9fd",
   warning: "#ffb86c",
   error: "#ff5555",

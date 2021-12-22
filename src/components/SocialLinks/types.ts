@@ -1,3 +1,5 @@
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+
 export enum SocialPlatformName {
   linkedin = "LinkedIn",
   github = "Github",
@@ -8,7 +10,7 @@ export enum SocialPlatformName {
 
 interface SocialPlatform {
   name: SocialPlatformName;
-  icon: string;
+  icon: IconDefinition;
   url: string;
 }
 

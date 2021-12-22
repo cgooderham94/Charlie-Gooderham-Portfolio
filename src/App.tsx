@@ -51,10 +51,6 @@ export const App: FunctionComponent = () => {
               <GetInTouch />
             </Route>
           </Switch>
-
-          <button onClick={() => setIsDarkMode(!isDarkMode)}>
-            {`Toggle ${isDarkMode ? "Light" : "Dark"} Mode`}
-          </button>
         </main>
       </BrowserRouter>
     </div>
